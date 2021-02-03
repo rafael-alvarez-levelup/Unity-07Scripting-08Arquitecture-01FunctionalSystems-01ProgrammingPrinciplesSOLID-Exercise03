@@ -2,7 +2,7 @@
 
 public class DestroyOnCollisionController : MonoBehaviour
 {
-    [SerializeField] private LayerMask destroyMask;
+    [SerializeField] private LayerMask collisionMask;
 
     private DestroyBehaviour destroyBehaviour;
 
@@ -13,12 +13,10 @@ public class DestroyOnCollisionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Destroy game object if other game object is in the assigned destroy layer.
-        if (ContainsLayer(other.gameObject.layer))
+        // Destroy this game object if the other game object is in the assigned destroy layer.
+        if (Utilities.ContainsLayer(collisionMask, other.gameObject.layer))
         {
             destroyBehaviour.Destroy();
         }
     }
-
-    private bool ContainsLayer(int layer) => destroyMask == (destroyMask | (1 << layer));
 }

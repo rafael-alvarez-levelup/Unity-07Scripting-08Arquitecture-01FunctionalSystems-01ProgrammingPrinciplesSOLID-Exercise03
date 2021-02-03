@@ -1,26 +1,28 @@
 ﻿using UnityEngine;
 
-// TODO: Allow weapon swap at runtime.
+// TODO: Refine weapon swap at runtime.
 
 public class WeaponController : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
+    [SerializeField] private WeaponBase[] weapons;
 
-    private WeaponBase weaponBase;
-
-    private void Awake()
-    {
-        weaponBase = GetComponent<WeaponBase>();
-    }
+    private int index = 0;
 
     private void Update()
     {
+        // Allow weapon swap at run time respecting the open-close principle, but not in the best way.
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            index = (index + 1) % weapons.Length;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (weaponBase.CanFire())
+            if (weapons[index].CanFire())
             {
-                weaponBase.Fire(firePoint);
-                weaponBase.SetNextFireTime();
+                weapons[index].Fire(firePoint);
+                weapons[index].SetNextFireTime();
             }
         }
     }

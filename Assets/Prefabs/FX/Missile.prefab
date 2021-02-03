@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 472527021832427137}
   - component: {fileID: 8027666936317447660}
+  - component: {fileID: 8445712041258394491}
   - component: {fileID: 1732871942783851870}
   - component: {fileID: 6440795849865679854}
   - component: {fileID: 7209382098211300992}
   - component: {fileID: 5706584072826765568}
-  - component: {fileID: 2450761845954812645}
   - component: {fileID: -5275009462380736747}
   - component: {fileID: 8200603418638172395}
   m_Layer: 11
@@ -48,12 +48,28 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472527021832427138}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.06
   m_Height: 0.49
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8445712041258394491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472527021832427138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262d7920141f683408ae2c765849b98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageData: {fileID: 11400000, guid: 89dd38fd334684c4c869792c76667d4a, type: 2}
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &1732871942783851870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,19 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
---- !u!114 &2450761845954812645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472527021832427138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9041bac9f670a5d4f8bb53a07ec7cc8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5
 --- !u!114 &-5275009462380736747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,9 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2133164d4cee46341a100f998b37ca8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMask:
+  collisionMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
 --- !u!114 &8200603418638172395
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -204,6 +204,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4b867fce0f8f1a046849992bd2e8fc5c, type: 2}
   - {fileID: 11400000, guid: 9db865237c4997a4f801b150d2d40941, type: 2}
   - {fileID: 11400000, guid: 104d494b4406f3c489a4e8ed60e79eb7, type: 2}
+  - {fileID: 11400000, guid: 104d494b4406f3c489a4e8ed60e79eb7, type: 2}
+  - {fileID: 11400000, guid: 9db865237c4997a4f801b150d2d40941, type: 2}
+  - {fileID: 11400000, guid: 4b867fce0f8f1a046849992bd2e8fc5c, type: 2}
   spawnPoints:
   - {fileID: 749959216}
   - {fileID: 758858154}
