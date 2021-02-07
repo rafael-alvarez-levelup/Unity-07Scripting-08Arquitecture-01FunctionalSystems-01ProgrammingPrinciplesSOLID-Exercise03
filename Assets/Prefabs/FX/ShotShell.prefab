@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5400000}
   - component: {fileID: 3530932944393522411}
   - component: {fileID: -5886371872277843284}
+  - component: {fileID: -7256699100247245929}
   - component: {fileID: 4863738139137394719}
   - component: {fileID: 6482580174089926354}
   - component: {fileID: -8388040790702136340}
@@ -78,10 +79,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262d7920141f683408ae2c765849b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageData: {fileID: 11400000, guid: 8fd81cad7b87a504e8d2b27d600a6dd9, type: 2}
-  collisionMask:
+  triggerMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &-7256699100247245929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4ba9b4f761c8f41824659477961af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageData: {fileID: 11400000, guid: 8fd81cad7b87a504e8d2b27d600a6dd9, type: 2}
 --- !u!114 &4863738139137394719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2133164d4cee46341a100f998b37ca8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionMask:
+  triggerMask:
     serializedVersion: 2
     m_Bits: 1536
 --- !u!114 &-8388040790702136340

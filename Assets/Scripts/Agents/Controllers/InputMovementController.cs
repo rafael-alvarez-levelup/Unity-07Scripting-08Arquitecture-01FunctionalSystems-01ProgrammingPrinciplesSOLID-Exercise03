@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(MovementBehaviour), typeof(EngineBehaviour))]
 public class InputMovementController : MonoBehaviour
 {
     private MovementBehaviour movementBehaviour;

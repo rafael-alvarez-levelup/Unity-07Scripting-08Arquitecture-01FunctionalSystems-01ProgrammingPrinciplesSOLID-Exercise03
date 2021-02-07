@@ -546,10 +546,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5751393321145476305, guid: 677ab9d0b4b89d947835aa5cef2e6777, type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5751393321145476307, guid: 677ab9d0b4b89d947835aa5cef2e6777, type: 3}
       propertyPath: m_Name
       value: Main Camera

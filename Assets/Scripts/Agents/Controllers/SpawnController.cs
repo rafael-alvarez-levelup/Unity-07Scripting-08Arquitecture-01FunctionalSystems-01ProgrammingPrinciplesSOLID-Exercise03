@@ -7,6 +7,7 @@ using UnityEngine;
 /// <summary>
 /// Manages the instantiation of enemies.
 /// </summary>
+[RequireComponent(typeof(SpawnBehaviour))]
 public class SpawnController : MonoBehaviour
 {
     #region Private Fields

@@ -13,7 +13,7 @@ public class Utilities : MonoBehaviour
 
     #region Layers
 
-    public static bool ContainsLayer(int layer, int targetLayer) => layer == (layer | (1 << targetLayer));
+    public static bool ContainsLayer(int mask, int targetLayer) => mask == (mask | (1 << targetLayer));
 
     #endregion
 }

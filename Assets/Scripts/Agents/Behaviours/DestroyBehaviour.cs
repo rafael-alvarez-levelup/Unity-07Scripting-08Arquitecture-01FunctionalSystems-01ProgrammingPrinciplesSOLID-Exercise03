@@ -2,7 +2,7 @@
 
 public class DestroyBehaviour : MonoBehaviour
 {
-    public void Destroy()
+    public virtual void Destroy()
     {
         Destroy(gameObject);
     }

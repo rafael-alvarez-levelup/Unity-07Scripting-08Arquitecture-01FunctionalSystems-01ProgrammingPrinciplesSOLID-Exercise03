@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(SearchNearestTargetBehaviour), typeof(MoveToTargetBehaviour), typeof(LookAtTargetBehaviour))]
 public class MissileController : MonoBehaviour
 {
     private SearchNearestTargetBehaviour searchBehaviour;

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
-public class DestroyOnCollisionController : MonoBehaviour
+[RequireComponent(typeof(DestroyBehaviour))]
+public class DestroyOnTriggerEnterController : MonoBehaviour
 {
-    [SerializeField] private LayerMask collisionMask;
+    [SerializeField] private LayerMask triggerMask;
 
     private DestroyBehaviour destroyBehaviour;
 
@@ -13,8 +14,7 @@ public class DestroyOnCollisionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Destroy this game object if the other game object is in the assigned destroy layer.
-        if (Utilities.ContainsLayer(collisionMask, other.gameObject.layer))
+        if (Utilities.ContainsLayer(triggerMask, other.gameObject.layer))
         {
             destroyBehaviour.Destroy();
         }
